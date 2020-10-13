@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  padding: 0.7rem 0;
+  position: relative;
+  background: #ffffff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  width: 100%;
+  margin: 0 auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 80px;
+  line-height: 80px;
 }
-
-.App-link {
-  color: #61dafb;
+.ant-layout-header {
+  background: #ffffff;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.ant-menu {
+  font-size: 18px;
+}
+.DesktopOnly ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  padding-inline-start: 0;
+}
+nav ul li {
+  padding: 0 0 0 30px;
+}
+a {
+  color: #767474;
+}
+.mobileMenu-enter {
+  opacity: 0;
+}
+.mobileMenu-enter-active {
+  opacity: 1;
+  transition: all 500ms;
+}
+.mobileMenu-exit {
+  opacity: 1;
+}
+.mobileMenu-exit-active {
+  opacity: 0;
+  transition: all 500ms;
+}
+@media screen and (max-width: 1023px) {
+  .container {
+    width: 96%;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar {
+    padding: 0.5rem 0;
+  }
+  .DesktopOnly {
+    display: none;
+  }
+
+  .DrawerToggle {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+  }
+  .DrawerToggle div {
+    width: 100%;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #767474;
+  }
+
+  .mobile ul {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 0;
+    padding-inline-start: 0;
+  }
+  .mobile ul li {
+    padding: 0.5em;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .site-layout-content {
+    height: 100vh;
+  }
+  .mobile {
+    display: none;
+  }
+  .DrawerToggle {
+    display: none;
+  }
+}
+@media screen and (min-width: 1216px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1344px;
   }
 }
