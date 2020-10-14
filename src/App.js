@@ -11,7 +11,7 @@ function App() {
     <Layout className="layout">
       <AppHeader />
 
-      <Content style={{ padding: "0 50px" }}>
+      <Content>
         <AppContent />
         <img src={logo} className="App-logo" alt="logo" />
       </Content>

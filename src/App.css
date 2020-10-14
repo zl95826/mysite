@@ -38,6 +38,11 @@ nav ul li {
 }
 a {
   color: #767474;
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: #eb4d4b;
 }
 .mobileMenu-enter {
   opacity: 0;
@@ -52,6 +57,14 @@ a {
 .mobileMenu-exit-active {
   opacity: 0;
   transition: all 500ms;
+}
+h1 {
+  font-weight: 500;
+  color: #141c3a;
+}
+h2 {
+  font-weight: 400;
+  color: rgba(10, 10, 10, 0.8);
 }
 @media screen and (max-width: 1023px) {
   .container {
@@ -91,6 +104,30 @@ a {
     padding: 0.5em;
     cursor: pointer;
   }
+  .site-layout-content {
+    width: 100%;
+    padding: 0 6%;
+  }
+  .hello {
+    padding: 8% 2%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .site-layout-content {
+    padding: 0 4%;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -100,12 +137,64 @@ a {
 
   .site-layout-content {
     height: 100vh;
+    width: 100%;
+    position: relative;
   }
   .mobile {
     display: none;
   }
   .DrawerToggle {
     display: none;
+  }
+  .hello {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+  }
+  .greeting {
+    position: relative;
+    animation: move 0.5s;
+  }
+  .move-text {
+    position: relative;
+    opacity: 0;
+    animation: move-text 0.75s forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+  }
+  @keyframes move-text {
+    0% {
+      bottom: -0.2em;
+      opacity: 1;
+    }
+
+    50% {
+      bottom: 0.2em;
+    }
+
+    100% {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  @keyframes move {
+    from {
+      left: -50px;
+    }
+    to {
+      left: 0;
+    }
+  }
+  h1 {
+    font-size: 2.4rem;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1216px) {
@@ -116,5 +205,11 @@ a {
 @media screen and (min-width: 1400px) {
   .container {
     max-width: 1344px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .hello {
+    width: 54%;
+    max-width: 1200px;
   }
 }

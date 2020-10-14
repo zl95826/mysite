@@ -19,7 +19,6 @@ function AppHeader() {
           <NavigationItems />
         </nav>
       </div>
-
       <CSSTransition
         in={toggle}
         timeout={500}
@@ -27,8 +26,6 @@ function AppHeader() {
         unmountOnExit
         classNames="mobileMenu"
       >
-        {/* <nav className="MobileOnly"> {toggle && <NavigationItems />}</nav> */}
-
         <nav className="mobile">
           <NavigationItems />
         </nav>
