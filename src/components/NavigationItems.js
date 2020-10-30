@@ -7,9 +7,9 @@ function NavigationItem({ link, children }) {
     </NavLink>
   );
 }
-
+// export default function NavigationItems() {
 export default function NavigationItems() {
-  const arr = ["Projects", "Experience", "About"];
+  const arr = ["Portfolio", "About"];
   return (
     <ul>
       {arr.map((v) => (

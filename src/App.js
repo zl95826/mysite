@@ -1,22 +1,41 @@
-import React from "react";
-import { Layout } from "antd";
+import React, { Suspense } from "react";
+import { Layout, BackTop } from "antd";
 import AppHeader from "./container/AppHeader";
-import AppContent from "./container/AppContent";
+import HomeContent from "./container/HomeContent";
+import Projects from "./container/page/Projects";
+import AppFooter from "./container/AppFooter";
 import "antd/dist/antd.css";
 import "./App.css";
-import logo from "./logo.svg";
+import { Route, Switch } from "react-router";
+import About from "./container/page/About";
+// const HomeContent = React.lazy(() => import("./container/HomeContent"));
+// const Projects = React.lazy(() => import("./container/page/Projects"));
 const { Content, Footer } = Layout;
+
 function App() {
   return (
     <Layout className="layout">
       <AppHeader />
 
       <Content>
-        <AppContent />
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <Suspense fallback={<h2>loading...</h2>}> */}
+        <Switch>
+          <Route exact path="/">
+            <HomeContent />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/portfolio">
+            <Projects />
+          </Route>
+        </Switch>
+        {/* </Suspense> */}
       </Content>
+
+      <BackTop />
       <Footer style={{ textAlign: "center" }}>
-        Ant Design ©2018 Created by Ant UED
+        <AppFooter />
       </Footer>
     </Layout>
   );

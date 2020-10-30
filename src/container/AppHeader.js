@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import NavigationItems from "../components/NavigationItems";
-import logo from "../logo.svg";
 import Logo from "../components/Logo";
 import DrawerToggle from "../components/DrawerToggle";
 import { CSSTransition } from "react-transition-group";
 
-function AppHeader() {
+function AppHeader({ click }) {
   const [toggle, setToggle] = useState(false);
   const clickHandle = () => {
     setToggle((pre) => !pre);
