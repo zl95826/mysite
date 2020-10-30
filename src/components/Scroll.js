@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 
 const BackTop = React.memo(({ show }) => {
-  console.log("memo test");
+  const scrollTop = () => {
+    const position = window.pageYOffset;
+    if (position > 0) {
+      window.scrollTo(0, position - position / 8);
+      window.requestAnimationFrame(scrollTop);
+    }
+  };
   return (
     <>
       {show ? (
-        <button style={{ position: "fixed", bottom: "0", right: "0" }}>
+        <button
+          onClick={scrollTop}
+          style={{ position: "fixed", bottom: "0", right: "0" }}
+        >
           UP
         </button>
       ) : null}
@@ -23,14 +32,9 @@ export default function Scroll() {
   };
 
   window.addEventListener("scroll", checkScrollTop);
-  const scrollTop = () => {};
+
   return (
     <>
-      {showScroll ? (
-        <button style={{ position: "fixed", bottom: "0", left: "0" }}>
-          UP
-        </button>
-      ) : null}
       <BackTop show={showScroll} />
     </>
   );
