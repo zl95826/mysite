@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import Characters from "../components/Characters";
-import { Row } from "antd";
+import { Row, Col } from "antd";
 import logo from "../logo.svg";
 // import Works from "../components/Works";
 const Works = lazy(() => import("../components/Works"));
@@ -22,6 +22,9 @@ export default function HomeContent() {
       </div>
       <div className="container">
         <Row justify="center" gutter={[24, 24]}>
+          <Col span={24}>
+            <h2 className="subtitle">My Recent Work</h2>
+          </Col>
           <Suspense fallback={<h2>Loading</h2>}>
             <Works />
           </Suspense>

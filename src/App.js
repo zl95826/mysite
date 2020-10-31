@@ -9,13 +9,17 @@ import "./App.css";
 import { Route, Switch } from "react-router";
 import About from "./container/page/About";
 import Scroll from "./components/Scroll";
+
 // const HomeContent = React.lazy(() => import("./container/HomeContent"));
 // const Projects = React.lazy(() => import("./container/page/Projects"));
+//import { TitleContext, AnimContext } from "./context";
 const { Content, Footer } = Layout;
 
 function App() {
   return (
     <Layout className="layout">
+      {/* <TitleContext.Provider value={clicked}>
+        <AnimContext.Provider value={setClicked}> */}
       <AppHeader />
 
       <Content>
@@ -33,10 +37,13 @@ function App() {
         </Switch>
         {/* </Suspense> */}
       </Content>
+
       <Scroll />
       <Footer style={{ textAlign: "center" }}>
         <AppFooter />
       </Footer>
+      {/* </AnimContext.Provider>
+      </TitleContext.Provider> */}
     </Layout>
   );
 }

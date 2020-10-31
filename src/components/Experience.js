@@ -1,5 +1,6 @@
 import React from "react";
 import { Timeline } from "antd";
+import QueueAnim from "rc-queue-anim";
 export default function Experience() {
   const windowsize =
     window.innerWidth ||
@@ -10,22 +11,24 @@ export default function Experience() {
     return (
       <Timeline mode="alternate">
         <Timeline.Item label="June 2018 - Present">
-          <h3>Freelance Front-end Developer</h3>
-          <p>
-            I work primarily as a Front-end developer to develop and launch
-            multiple projects from scratch, carrying the development of its'
-            front-end and back-end codebases.
-          </p>
-          <p>
-            In front-end development, my current toolset includes React, Redux,
-            ES6 and the other various frameworks, libraries and technologies
-            related to them. I also care about UI design, providing elegant UI
-            and graphic design for my clients.
-          </p>
-          <p>
-            In back-end development, my current stack involves NodeJS, MongoDB,
-            REST API, and GraphQL.
-          </p>
+          <QueueAnim type="bottom" delay={300} interval={300}>
+            <h3>Freelance Front-end Developer</h3>
+            <p key="a">
+              I work primarily as a Front-end developer to develop and launch
+              multiple projects from scratch, carrying the development of its'
+              front-end and back-end codebases.
+            </p>
+            <p key="b">
+              In front-end development, my current toolset includes React,
+              Redux, ES6 and the other various frameworks, libraries and
+              technologies related to them. I also care about UI design,
+              providing elegant UI and graphic design for my clients.
+            </p>
+            <p key="c">
+              In back-end development, my current stack involves NodeJS,
+              MongoDB, REST API, and GraphQL.
+            </p>
+          </QueueAnim>
         </Timeline.Item>
         <Timeline.Item label="October 2014 - July 2019">
           <h3>Frontend Web Developer in Globex People LLC </h3>
@@ -45,7 +48,7 @@ export default function Experience() {
           </p>
           <p>Design tools: Adobe Creative Suite, Balsamiq Mockups, Sketch</p>
         </Timeline.Item>
-        <Timeline.Item label="Feb 2014 - Sep 2014">
+        <Timeline.Item label="Feb 2014 - Sep 2014" key="2">
           <h3>UI/UX Developer Intern in Accenture </h3>
           <p>
             Worked with a lead designer to provide UI/UX solutions, including

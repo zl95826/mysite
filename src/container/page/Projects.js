@@ -3,6 +3,7 @@ import { Row, Col } from "antd";
 import Project from "../../components/project/Project";
 import k2 from "../../1.jpg";
 import k3 from "../../KN2.jpg";
+import QueueAnim from "rc-queue-anim";
 export default function Projects() {
   const portfolio = [
     {
@@ -51,7 +52,11 @@ export default function Projects() {
     },
   ];
   return (
-    <section id="portfolio" className="container">
+    <section
+      id="portfolio"
+      className="container"
+      style={{ minHeight: "100vh" }}
+    >
       <Row justify="center">
         <Col span={24}>
           <h2 className="subtitle">WHAT I DID</h2>
@@ -62,11 +67,19 @@ export default function Projects() {
           </h3>
         </Col>
       </Row>
-      <Row justify="center">
+
+      <QueueAnim
+        type={["right", "left"]}
+        delay={100}
+        duration={600}
+        interval={600}
+      >
         {portfolio.map((val, index) => (
-          <Project key={index} {...val} />
+          <Row justify="center" key={index}>
+            <Project {...val} />
+          </Row>
         ))}
-      </Row>
+      </QueueAnim>
     </section>
   );
 }

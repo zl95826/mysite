@@ -1,5 +1,5 @@
 import React from "react";
-import { Col } from "antd";
+import { Col, Button } from "antd";
 export default function Image({ src, text, classname }) {
   return (
     <Col
@@ -11,7 +11,10 @@ export default function Image({ src, text, classname }) {
       <div className={`recent-container ${classname}`}>
         <img src={src} alt={text} width={500} height={600} />
         <div className="recent-middle">
-          <h3 style={{ color: "white" }}>{text}</h3>
+          <h3 style={{ color: "white", fontWeight: 600 }}>{text}</h3>
+          <Button type="primary" href="" target="_blank">
+            VIEW MORE
+          </Button>
         </div>
       </div>
     </Col>
