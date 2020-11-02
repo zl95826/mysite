@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const BackTop = React.memo(({ show }) => {
   const scrollTop = () => {
@@ -30,9 +30,10 @@ export default function Scroll() {
       setShowScroll(false);
     }
   };
-
-  window.addEventListener("scroll", checkScrollTop);
-
+  useEffect(() => {
+    window.addEventListener("scroll", checkScrollTop);
+    return () => window.removeEventListener("scroll", checkScrollTop);
+  }, [showScroll]);
   return (
     <>
       <BackTop show={showScroll} />
