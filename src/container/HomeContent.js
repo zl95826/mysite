@@ -2,8 +2,9 @@ import React, { Suspense, lazy } from "react";
 import Characters from "../components/Characters";
 import { Row, Col } from "antd";
 import logo from "../logo.svg";
-// import Works from "../components/Works";
-const Works = lazy(() => import("../components/Works"));
+import Skills from "../components/Skills";
+import Works from "../components/Works";
+//const Works = lazy(() => import("../components/Works"));
 export default function HomeContent() {
   return (
     <section id="home">
@@ -16,8 +17,6 @@ export default function HomeContent() {
             <br />a Front-end Developer
           </h1>
           <h3>with a passion for learning</h3>
-
-          {/* I love programming, designing, traveling, hiking, and cooking. */}
         </div>
       </div>
       <div className="container">
@@ -25,11 +24,11 @@ export default function HomeContent() {
           <Col span={24}>
             <h2 className="subtitle">My Recent Work</h2>
           </Col>
-          <Suspense fallback={<h2>Loading</h2>}>
-            <Works />
-          </Suspense>
+          {/* <Suspense fallback={<h2>Loading</h2>}> */}
+          <Works />
+          {/* </Suspense> */}
         </Row>
-        <img src={logo} className="App-logo" alt="logo" />
+        <Skills />
       </div>
     </section>
   );

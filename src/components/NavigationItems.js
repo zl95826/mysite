@@ -1,15 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-// import { AnimContext } from "../context";
+
 function NavigationItem({ link, children }) {
-  // const handleClick = useContext(AnimContext);
   return (
     <NavLink to={link} exact>
       {children}
     </NavLink>
   );
 }
-// export default function NavigationItems() {
+
 export default function NavigationItems() {
   const arr = ["Portfolio", "About"];
   return (
