@@ -364,8 +364,8 @@ a.ant-btn {
   }
   .sk {
     opacity: 0;
-    animation: move 0.75s 1s forwards;
-    -webkit-animation: move 0.75s 1s forwards;
+    animation: move 0.75s 0.5s forwards;
+    -webkit-animation: move 0.75s 0.5s forwards;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
@@ -388,12 +388,20 @@ a.ant-btn {
     max-width: 1200px;
   }
 }
-
+/* .sl {
+  position: relative;
+}
+.skills-appear,
+.skills-appear-active,
+.skills-appear-done {
+  left: 100px;
+}
 .skills-enter {
   opacity: 0;
   left: 100px;
 }
 .skills-enter-active {
+  display: block;
   opacity: 1;
   left: 0;
   transition: all 500ms 500ms;
@@ -406,4 +414,4 @@ a.ant-btn {
   opacity: 0;
   left: 100px;
   transition: all 500ms 500ms;
-}
+} */

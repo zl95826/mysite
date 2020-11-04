@@ -78,7 +78,7 @@ const ele = (
 export default function Skills() {
   const myRef = useRef(null);
   const [show, setShow] = useState(false);
-
+  console.log(show);
   useEffect(() => {
     const pos = myRef.current.getBoundingClientRect().top;
     const onScroll = () => {
@@ -98,16 +98,8 @@ export default function Skills() {
             My Skills
           </h2>
         </Col>
-        {/* {show ? ele : null} */}
       </Row>
-      <div ref={myRef}>
-        {/* <Row justify="center" gutter={[36, 36]}> */}
-        {/* <CSSTransition in={show} timeout={1000} classNames="skills">
-          <div className="sl">{ele}</div>
-        </CSSTransition> */}
-        {show ? <div className="sk">{ele}</div> : null}
-        {/* </Row> */}
-      </div>
+      <div ref={myRef}>{show ? <div className="sk">{ele}</div> : null}</div>
     </div>
   );
 }
