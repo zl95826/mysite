@@ -1,18 +1,29 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Col, Row } from "antd";
 import { CSSTransition } from "react-transition-group";
+import QueueAnim from "rc-queue-anim";
 import styled from "styled-components";
-import { Javascript, Wordpress } from "@styled-icons/simple-icons";
-
-const Skill = ({ component }) => {
-  const Test = styled(component)`
-    color: red;
-    width: 100px;
-    height: 100px;
-    &:hover {
-      color: black;
-    }
-  `;
+import {
+  Javascript,
+  Wordpress,
+  Html5,
+  Css3,
+  Redux,
+  Mongodb,
+  Graphql,
+  Adobephotoshop,
+  Adobeillustrator,
+} from "@styled-icons/simple-icons";
+const StyledWrapper = styled.div`
+  color: red;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  &:hover {
+    color: black;
+  }
+`;
+const skillHOC = (Component) => (props) => {
   return (
     <Col xs={{ span: 6 }} sm={{ span: 6 }} md={{ span: 4 }} lg={{ span: 4 }}>
       {/* @styled-icons/simple-icons/Javascript
@@ -27,28 +38,40 @@ const Skill = ({ component }) => {
      @styled-icons/simple-icons/Adobephotoshop
      @styled-icons/simple-icons/Adobeillustrator
      @styled-icons/boxicons-logos/Git */}
-      <Test />
+      <StyledWrapper>
+        <Component {...props} />
+      </StyledWrapper>
     </Col>
   );
 };
-// const ele = (
-//   <Col xs={{ span: 6 }} sm={{ span: 6 }} md={{ span: 4 }} lg={{ span: 4 }}>
-//     <Skill component={Javascript} />
-//   </Col>
-// );
-const ele2 = (
-  <Row justify="center" gutter={[36, 36]}>
-    {[Javascript, Wordpress].map((v, index) => (
-      <Col
-        xs={{ span: 6 }}
-        sm={{ span: 6 }}
-        md={{ span: 4 }}
-        lg={{ span: 4 }}
-        key={index}
-      >
-        <Skill component={v} />
-      </Col>
-    ))}
+
+const ele = (
+  <Row justify="center" gutter={[24, 24]}>
+    {[
+      Javascript,
+      Wordpress,
+      Html5,
+      Css3,
+      Redux,
+      Mongodb,
+      Graphql,
+      Adobephotoshop,
+      Adobeillustrator,
+    ].map(
+      (v, index) => {
+        const Wrapped = skillHOC(v);
+        return <Wrapped key={index} />;
+      }
+      // <Col
+      //   xs={{ span: 6 }}
+      //   sm={{ span: 6 }}
+      //   md={{ span: 4 }}
+      //   lg={{ span: 4 }}
+      //   key={index}
+      // >
+      //<Skill component={v} key={index} />
+      //  </Col>
+    )}
   </Row>
 );
 
@@ -79,9 +102,10 @@ export default function Skills() {
       </Row>
       <div ref={myRef}>
         {/* <Row justify="center" gutter={[36, 36]}> */}
-        <CSSTransition in={show} timeout={1000} classNames="skills">
-          <div className="sl">{ele2}</div>
-        </CSSTransition>
+        {/* <CSSTransition in={show} timeout={1000} classNames="skills">
+          <div className="sl">{ele}</div>
+        </CSSTransition> */}
+        {show ? <div className="sk">{ele}</div> : null}
         {/* </Row> */}
       </div>
     </div>

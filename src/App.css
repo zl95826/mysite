@@ -86,7 +86,7 @@ h3 {
 .ant-timeline-item p {
   padding: 0 6% 0 0;
 }
-.timeline-enter {
+/* .timeline-enter {
   opacity: 0;
   transform: scale(0.9);
 }
@@ -102,7 +102,7 @@ h3 {
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms;
-}
+} */
 .recent-container {
   position: relative;
   width: 100%;
@@ -169,6 +169,13 @@ a.ant-btn {
 .ant-layout-footer {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+.sk {
+  margin-top: 6%;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: pink;
 }
 
 @media screen and (max-width: 1023px) {
@@ -289,6 +296,7 @@ a.ant-btn {
     opacity: 0;
     font-weight: 600;
     animation: move-text 0.75s forwards;
+    -webkit-animation: move-text 0.75s forwards;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
@@ -309,11 +317,38 @@ a.ant-btn {
       opacity: 1;
     }
   }
-  @keyframes move {
+  @-webkit-keyframes move-text {
+    0% {
+      bottom: -0.2em;
+      opacity: 1;
+    }
+
+    50% {
+      bottom: 0.2em;
+    }
+
+    100% {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes move {
     from {
+      opacity: 0;
       left: -60px;
     }
     to {
+      opacity: 1;
+      left: 0;
+    }
+  }
+  @keyframes move {
+    from {
+      opacity: 0;
+      left: -60px;
+    }
+    to {
+      opacity: 1;
       left: 0;
     }
   }
@@ -326,6 +361,15 @@ a.ant-btn {
   }
   .subtitle {
     font-size: 1.8rem;
+  }
+  .sk {
+    opacity: 0;
+    animation: move 0.75s 1s forwards;
+    -webkit-animation: move 0.75s 1s forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
   }
 }
 @media screen and (min-width: 1216px) {
@@ -344,12 +388,7 @@ a.ant-btn {
     max-width: 1200px;
   }
 }
-.sl {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  background-color: pink;
-}
+
 .skills-enter {
   opacity: 0;
   left: 100px;
