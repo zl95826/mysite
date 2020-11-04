@@ -28,23 +28,14 @@ const StyledWrapper = styled.div`
   }
   &:hover .name {
     display: block;
+    margin-top: 6px;
+    font-size: 16px;
+    text-align: center;
   }
 `;
 const skillHOC = (Component) => (props) => {
   return (
     <Col xs={{ span: 6 }} sm={{ span: 6 }} md={{ span: 4 }} lg={{ span: 4 }}>
-      {/* @styled-icons/simple-icons/Javascript
-     @styled-icons/simple-icons/Wordpress
-     @styled-icons/fa-brands/Node
-     @styled-icons/simple-icons/Mongodb
-     @styled-icons/simple-icons/Html5
-     @styled-icons/simple-icons/Css3
-     @styled-icons/simple-icons/ReactLogo
-     @styled-icons/simple-icons/Redux @styled-icons/simple-icons/Git
-     @styled-icons/simple-icons/Graphql
-     @styled-icons/simple-icons/Adobephotoshop
-     @styled-icons/simple-icons/Adobeillustrator
-     @styled-icons/boxicons-logos/Git */}
       <StyledWrapper>
         <Component />
         <p className="name">{props.value}</p>
@@ -54,9 +45,20 @@ const skillHOC = (Component) => (props) => {
 };
 
 const ele = (
-  <Row justify="center" gutter={[24, 36]}>
+  <Row justify="center" gutter={[24, 48]}>
     {[
       { component: Javascript, val: "JavaScript" },
+      { component: ReactLogo, val: "React" },
+      { component: Redux, val: "Redux" },
+      { component: Graphql, val: "Graphql" },
+      { component: Html5, val: "HTML5" },
+      { component: Css3, val: "CSS3" },
+      { component: Mongodb, val: "MongoDB" },
+      { component: Node, val: "Node" },
+      { component: Git, val: "Git" },
+      { component: Wordpress, val: "Wordpress" },
+      { component: Adobephotoshop, val: "Photoshop" },
+      { component: Adobeillustrator, val: "Adobe illustrator" },
       //   ReactLogo,
       //   Redux,
       //   Graphql,
