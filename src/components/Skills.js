@@ -1,19 +1,20 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Col, Row } from "antd";
-import { CSSTransition } from "react-transition-group";
-import QueueAnim from "rc-queue-anim";
 import styled from "styled-components";
 import {
   Javascript,
   Wordpress,
-  Html5,
-  Css3,
   Redux,
   Mongodb,
   Graphql,
+  Html5,
+  Css3,
   Adobephotoshop,
   Adobeillustrator,
+  ReactLogo,
+  Git,
 } from "@styled-icons/simple-icons";
+import { Node } from "@styled-icons/fa-brands";
 const StyledWrapper = styled.div`
   color: red;
   width: 80px;
@@ -21,6 +22,12 @@ const StyledWrapper = styled.div`
   margin: 0 auto;
   &:hover {
     color: black;
+  }
+  .name {
+    display: none;
+  }
+  &:hover .name {
+    display: block;
   }
 `;
 const skillHOC = (Component) => (props) => {
@@ -32,53 +39,45 @@ const skillHOC = (Component) => (props) => {
      @styled-icons/simple-icons/Mongodb
      @styled-icons/simple-icons/Html5
      @styled-icons/simple-icons/Css3
-     @styled-icons/fa-brands/ReactLogo
-     @styled-icons/simple-icons/Redux
+     @styled-icons/simple-icons/ReactLogo
+     @styled-icons/simple-icons/Redux @styled-icons/simple-icons/Git
      @styled-icons/simple-icons/Graphql
      @styled-icons/simple-icons/Adobephotoshop
      @styled-icons/simple-icons/Adobeillustrator
      @styled-icons/boxicons-logos/Git */}
       <StyledWrapper>
-        <Component {...props} />
+        <Component />
+        <p className="name">{props.value}</p>
       </StyledWrapper>
     </Col>
   );
 };
 
 const ele = (
-  <Row justify="center" gutter={[24, 24]}>
+  <Row justify="center" gutter={[24, 36]}>
     {[
-      Javascript,
-      Wordpress,
-      Html5,
-      Css3,
-      Redux,
-      Mongodb,
-      Graphql,
-      Adobephotoshop,
-      Adobeillustrator,
-    ].map(
-      (v, index) => {
-        const Wrapped = skillHOC(v);
-        return <Wrapped key={index} />;
-      }
-      // <Col
-      //   xs={{ span: 6 }}
-      //   sm={{ span: 6 }}
-      //   md={{ span: 4 }}
-      //   lg={{ span: 4 }}
-      //   key={index}
-      // >
-      //<Skill component={v} key={index} />
-      //  </Col>
-    )}
+      { component: Javascript, val: "JavaScript" },
+      //   ReactLogo,
+      //   Redux,
+      //   Graphql,
+      //   Html5,
+      //   Css3,
+      //   Mongodb,
+      //   Node,
+      //   Git,
+      //   Wordpress,
+      //   Adobephotoshop,
+      //   Adobeillustrator,
+    ].map((v, index) => {
+      const Wrapped = skillHOC(v.component);
+      return <Wrapped key={index} value={v.val} />;
+    })}
   </Row>
 );
 
 export default function Skills() {
   const myRef = useRef(null);
   const [show, setShow] = useState(false);
-  console.log(show);
   useEffect(() => {
     const pos = myRef.current.getBoundingClientRect().top;
     const onScroll = () => {
