@@ -5,6 +5,7 @@ import logo from "../logo.svg";
 import Skills from "../components/Skills";
 import Works from "../components/Works";
 //const Works = lazy(() => import("../components/Works"));
+import Test from "../components/Test";
 export default function HomeContent() {
   return (
     <section id="home">
@@ -18,6 +19,7 @@ export default function HomeContent() {
           </h1>
           <h3>with a passion for learning</h3>
         </div>
+        <Test />
       </div>
       <div className="container">
         <Row justify="center" gutter={[24, 24]}>

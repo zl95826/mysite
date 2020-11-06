@@ -59,17 +59,6 @@ const ele = (
       { component: Wordpress, val: "Wordpress" },
       { component: Adobephotoshop, val: "Photoshop" },
       { component: Adobeillustrator, val: "Adobe illustrator" },
-      //   ReactLogo,
-      //   Redux,
-      //   Graphql,
-      //   Html5,
-      //   Css3,
-      //   Mongodb,
-      //   Node,
-      //   Git,
-      //   Wordpress,
-      //   Adobephotoshop,
-      //   Adobeillustrator,
     ].map((v, index) => {
       const Wrapped = skillHOC(v.component);
       return <Wrapped key={index} value={v.val} />;

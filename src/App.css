@@ -177,7 +177,17 @@ a.ant-btn {
   padding: 5% 0;
   background-color: pink;
 }
-
+.test {
+  position: absolute;
+  right: 350px;
+  top: -100px;
+  transition: all 0.5s;
+}
+.test2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 @media screen and (max-width: 1023px) {
   .container {
     width: 96%;
