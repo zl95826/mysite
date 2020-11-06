@@ -4,24 +4,16 @@ import k2 from "../1.jpg";
 
 export default function Test() {
   const [pos, setPos] = useState({ x: 0, y: 0 });
-  useEffect(() => {
-    const handleMove = (e) => {
-      console.log(e.clientY);
-      if (e.clientY < window.innerHeight / 2) {
-        setPos((pre) => ({
-          x: (e.clientX - pre.x) / 20,
-          y: (e.clientY - pre.y) / 20,
-        }));
-      }
-    };
-    window.addEventListener("mousemove", handleMove);
-    return () => {
-      window.removeEventListener("mousemove", handleMove);
-    };
-  }, [pos]);
-  console.log(pos);
+  const handleMove = (e) => {
+    setPos((pre) => ({
+      x: (e.clientX - pre.x) / 20,
+      y: (e.clientY - pre.y) / 20,
+    }));
+  };
+
   return (
     <div
+      onMouseMove={handleMove}
       style={{
         width: "80%",
         height: "50%",
