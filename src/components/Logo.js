@@ -5,7 +5,8 @@ export default function Logo() {
   return (
     <div>
       <NavLink to="/">
-        <img src={logo} alt="logo" style={{ height: "80px" }} />
+        {/* <img src={logo} alt="logo" style={{ height: "80px" }} /> */}
+        BL
       </NavLink>
     </div>
   );

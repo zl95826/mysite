@@ -4,7 +4,7 @@ import Logo from "../components/Logo";
 import DrawerToggle from "../components/DrawerToggle";
 import { CSSTransition } from "react-transition-group";
 
-function AppHeader({ click }) {
+function AppHeader() {
   const [toggle, setToggle] = useState(false);
   const clickHandle = () => {
     setToggle((pre) => !pre);
