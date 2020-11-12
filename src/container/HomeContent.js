@@ -4,9 +4,28 @@ import { Row, Col } from "antd";
 import logo from "../logo.svg";
 import Skills from "../components/Skills";
 import Works from "../components/Works";
+import bg5 from "../bg5.png";
 //const Works = lazy(() => import("../components/Works"));
 import Test from "../components/Test";
 export default function HomeContent() {
+  const windowsize =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+  let heroSection;
+  if (windowsize >= 1024) {
+    heroSection = <Test />;
+  } else {
+    // const
+    heroSection = (
+      <div
+        className="mobile-hero-image"
+        style={{ backgroundImage: `url(${bg5})`, backgroundSize: "contain" }}
+      />
+      // <img src={bg5} alt="hero image" className="mobile-hero-image" style={{}}/>
+    );
+  }
+
   return (
     <section id="home">
       <div className="home-layout-content">
@@ -19,7 +38,8 @@ export default function HomeContent() {
           </h1>
           <h3>with a passion for learning</h3>
         </div>
-        <Test />
+        {/* <Test /> */}
+        {heroSection}
       </div>
       <div className="container">
         <Row justify="center" gutter={[24, 24]}>

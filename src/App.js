@@ -17,7 +17,7 @@ const { Content, Footer } = Layout;
 
 function App() {
   return (
-    <Layout className="layout">
+    <Layout>
       {/* <TitleContext.Provider value={clicked}>
         <AnimContext.Provider value={setClicked}> */}
       <AppHeader />

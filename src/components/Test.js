@@ -9,7 +9,7 @@ const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
 const trans2 = (x, y) => `translate3d(${x / 8}px,${y / 10}px,0)`;
 const trans3 = (x, y) => `translate3d(${x / 6}px,${y / 10}px,0)`;
-const trans4 = (x, y) => `translate3d(${x / 4}px,${y / 8}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 6}px,${y / 8}px,0)`;
 // const trans5 = (x, y) => (y > 0 ? `0.48` : `0.8`);
 
 export default function Test() {
@@ -27,78 +27,54 @@ export default function Test() {
       className="hero-image-part"
       //onMouseMove={(e) => set({ xy: calc(e.clientX, e.clientY) })}
       //onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-      //   style={{
-      //     width: "100%",
-      //     minHeight: "100%",
-      //     position: "absolute",
-      //     right: "0",
-      //     bottom: "30px",
-      //   }}
     >
-      <animated.img
-        className="test"
+      <animated.div
+        className="hero-item"
         style={{
-          width: "800px",
-          height: "auto",
-          position: "absolute",
           right: "0",
           bottom: "0",
-          zIndex: "5",
+          zIndex: "2",
           transform: props.xy.interpolate(trans1),
+          backgroundImage: `url(${bg1})`,
+          backgroundSize: "contain",
         }}
-        src={bg1}
-        alt=""
-        width={500}
-        height={600}
       />
-      <animated.img
-        className="test2"
+      <animated.div
+        className="hero-item"
         style={{
-          width: "800px",
-          height: "auto",
-          position: "absolute",
           right: "30px",
           bottom: "-20px",
           zIndex: "1",
           transform: props.xy.interpolate(trans2),
+          backgroundImage: `url(${bg2})`,
+          backgroundSize: "contain",
           // opacity: props.xy.interpolate(trans5),
         }}
-        src={bg2}
-        alt=""
-        width={500}
-        height={600}
       />
-      <animated.img
-        className="test2"
+      <animated.div
+        className="hero-item"
         style={{
-          width: "800px",
-          height: "auto",
-          position: "absolute",
           right: "30px",
           bottom: "0px",
-          zIndex: "10",
+          zIndex: "3",
           transform: props.xy.interpolate(trans3),
+          backgroundImage: `url(${bg3})`,
+          backgroundSize: "contain",
         }}
-        src={bg3}
-        alt=""
-        width={500}
-        height={600}
       />
-      <animated.img
-        className="test2"
+      <animated.div
+        className="hero-item2"
         style={{
           width: "110px",
-          height: "auto",
+          height: "110px",
           position: "absolute",
-          right: "450px",
+          right: "400px",
           bottom: "400px",
-          zIndex: "10",
+          zIndex: "4",
           transform: props.xy.interpolate(trans4),
+          backgroundImage: `url(${bg4})`,
+          backgroundSize: "contain",
         }}
-        src={bg4}
-        alt=""
-        width={500}
-        height={600}
       />
     </div>
   );
