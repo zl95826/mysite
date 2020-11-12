@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useSpring, animated } from "react-spring";
 import bg1 from "../bg1.png";
 import bg2 from "../bg2.png";
@@ -6,10 +6,10 @@ import bg3 from "../bg3.png";
 import bg4 from "../bg4.png";
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
-const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 8}px,${y / 10}px,0)`;
-const trans3 = (x, y) => `translate3d(${x / 6}px,${y / 10}px,0)`;
-const trans4 = (x, y) => `translate3d(${x / 6}px,${y / 8}px,0)`;
+const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 12}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 8}px,${y / 12}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 6}px,${y / 12}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 4}px,${y / 10}px,0)`;
 // const trans5 = (x, y) => (y > 0 ? `0.48` : `0.8`);
 
 export default function Test() {
@@ -17,13 +17,13 @@ export default function Test() {
     xy: [0, 0],
     config: { mass: 10, tension: 550, friction: 140 },
   }));
-  const onMove = useCallback(
-    (e) => set({ xy: calc(e.clientX, e.clientY) }),
-    []
-  );
+  //   const onMove = useCallback(
+  //     (e) => set({ xy: calc(e.clientX, e.clientY) }),
+  //     []
+  //   );
   return (
     <div
-      onMouseMove={onMove}
+      onMouseMove={(e) => set({ xy: calc(e.clientX, e.clientY) })}
       className="hero-image-part"
       //onMouseMove={(e) => set({ xy: calc(e.clientX, e.clientY) })}
       //onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}

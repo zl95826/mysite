@@ -86,9 +86,24 @@ h3 {
   font-weight: 600;
   color: rgba(10, 10, 10, 0.8);
 }
+.show-me-more {
+  display: block;
+  width: 30%;
+  max-width: 240px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #000000;
+  text-align: center;
+  padding: 24px 30px;
+  margin-top: 25px;
+  font-size: 16px;
+  border-radius: 50px;
+}
 .subtitle {
   text-align: center;
   font-family: "Poppins", sans-serif;
+  padding: 70px 0;
+  margin-bottom: 0;
 }
 .ant-timeline-item p,
 .ant-timeline-item-label {
@@ -224,7 +239,7 @@ a.ant-btn {
   .DrawerToggle div {
     width: 68%;
     height: 3px;
-    margin: 4px auto;
+    margin: 3px auto;
     background-color: #000000;
   }
 
@@ -247,10 +262,16 @@ a.ant-btn {
   }
   h1 {
     font-size: 1.8rem;
-    line-height: 1.38;
   }
   h3 {
     font-size: 1.3rem;
+  }
+  .show-me-more {
+    display: block;
+    width: 50%;
+    min-width: 200px;
+    padding: 10px 20px;
+    margin-top: 15px;
   }
   .subtitle {
     font-size: 1.6rem;
@@ -261,7 +282,7 @@ a.ant-btn {
   .mobile-hero-image {
     display: block;
     width: 100%;
-    height: 420px;
+    height: 400px;
     background-repeat: no-repeat;
     background-position: right bottom;
   }
@@ -400,6 +421,7 @@ a.ant-btn {
   h1 {
     font-size: 3.25rem;
     letter-spacing: -0.2px;
+    line-height: 1.42;
   }
   h3 {
     font-size: 1.85rem;
@@ -419,7 +441,7 @@ a.ant-btn {
   .hero-image-part {
     display: block;
     width: 100%;
-    height: 85%;
+    height: 100%;
     position: absolute;
     right: 0;
     bottom: 10px;
@@ -450,14 +472,12 @@ a.ant-btn {
   }
   .home-layout-content {
     height: 60vh;
+    min-height: 700px;
   }
   h1 {
     font-size: 3.65rem;
   }
   .hero-image-part {
-    width: 80%;
-    height: 80%;
-    position: absolute;
     right: 10%;
   }
 }
