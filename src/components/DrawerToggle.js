@@ -1,5 +1,5 @@
 import React from "react";
-
+import { CloseOutlined } from "@ant-design/icons";
 export default function DrawerToggle({ click, icon }) {
   if (!icon) {
     return (
@@ -11,8 +11,9 @@ export default function DrawerToggle({ click, icon }) {
     );
   } else
     return (
-      <div className="DrawerToggle" onClick={click}>
-        Menu
+      <div className="DrawerToggle closeIcon" onClick={click}>
+        {/* Menu */}
+        <CloseOutlined />
       </div>
     );
 }

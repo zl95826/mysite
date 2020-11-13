@@ -6,7 +6,7 @@ import Skills from "../components/Skills";
 import Works from "../components/Works";
 import bg5 from "../bg5.png";
 //const Works = lazy(() => import("../components/Works"));
-import Test from "../components/Test";
+import Hero from "../components/Hero";
 import { NavLink } from "react-router-dom";
 const heroSection = (
   <div
@@ -30,7 +30,7 @@ export default function HomeContent() {
             Show me more
           </NavLink>
         </div>
-        <Test />
+        <Hero />
         {heroSection}
       </div>
       <div className="container">

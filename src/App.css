@@ -13,7 +13,7 @@ body {
 .navbar {
   padding: 0.7rem 0;
   position: relative;
-  z-index: 100;
+  z-index: 10;
   background: #f9ca24; /* #f6e58d*/
 }
 .container {
@@ -59,19 +59,8 @@ a:active {
 nav ul li a {
   font-weight: 600;
 }
-.mobileMenu-enter {
-  opacity: 0;
-}
-.mobileMenu-enter-active {
-  opacity: 1;
-  transition: all 500ms;
-}
-.mobileMenu-exit {
-  opacity: 1;
-}
-.mobileMenu-exit-active {
-  opacity: 0;
-  transition: all 500ms;
+.modal {
+  display: none;
 }
 .home-layout-content {
   background-color: #f9ca24; /* #f6e58d*/
@@ -243,6 +232,10 @@ a.ant-btn {
     background-color: #000000;
   }
 
+  .mobile {
+    display: block;
+  }
+
   .mobile ul {
     list-style: none;
     text-align: center;
@@ -252,6 +245,43 @@ a.ant-btn {
   .mobile ul li {
     padding: 0.5em;
     cursor: pointer;
+  }
+  .mobile ul li a,
+  .closeIcon {
+    color: #f7f7f7;
+    font-size: 1.8rem;
+  }
+  .closeIcon {
+    z-index: 30;
+  }
+  .modal {
+    display: flex;
+    background-color: rgba(10, 10, 10, 0.8);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: 20;
+  }
+  .mobileMenu-enter {
+    top: -200px;
+    opacity: 0;
+  }
+  .mobileMenu-enter-active {
+    opacity: 1;
+    top: 0px;
+    transition: all 500ms;
+  }
+  .mobileMenu-exit {
+    opacity: 1;
+    top: 0;
+  }
+  .mobileMenu-exit-active {
+    opacity: 0;
+    top: -200px;
+    transition: all 500ms;
   }
   .home-layout-content {
     width: 100%;

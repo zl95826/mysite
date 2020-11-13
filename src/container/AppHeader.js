@@ -3,6 +3,7 @@ import NavigationItems from "../components/NavigationItems";
 import Logo from "../components/Logo";
 import DrawerToggle from "../components/DrawerToggle";
 import { CSSTransition } from "react-transition-group";
+import Modal from "../components/Modal";
 
 function AppHeader() {
   const [toggle, setToggle] = useState(false);
@@ -25,9 +26,11 @@ function AppHeader() {
         unmountOnExit
         classNames="mobileMenu"
       >
-        <nav className="mobile">
-          <NavigationItems />
-        </nav>
+        <Modal show={toggle} click={clickHandle}>
+          <nav className="mobile">
+            <NavigationItems />
+          </nav>
+        </Modal>
       </CSSTransition>
     </header>
   );
