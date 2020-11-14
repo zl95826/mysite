@@ -16,12 +16,12 @@ import {
 } from "@styled-icons/simple-icons";
 import { Node } from "@styled-icons/fa-brands";
 const StyledWrapper = styled.div`
-  color: red;
+  color: rgba(255, 255, 255, 0.6);
   width: 80px;
   height: 80px;
-  margin: 0 auto;
+  margin: 60px auto 60px auto;
   &:hover {
-    color: black;
+    color: white;
   }
   .name {
     display: none;
@@ -35,7 +35,13 @@ const StyledWrapper = styled.div`
 `;
 const skillHOC = (Component) => (props) => {
   return (
-    <Col xs={{ span: 6 }} sm={{ span: 6 }} md={{ span: 4 }} lg={{ span: 4 }}>
+    <Col
+      xs={{ span: 12 }}
+      sm={{ span: 8 }}
+      md={{ span: 6 }}
+      lg={{ span: 4 }}
+      className="skill-item"
+    >
       <StyledWrapper>
         <Component />
         <p className="name">{props.value}</p>
@@ -45,7 +51,8 @@ const skillHOC = (Component) => (props) => {
 };
 
 const ele = (
-  <Row justify="center" gutter={[24, 48]}>
+  <Row justify="center">
+    {/* <Row justify="center" gutter={[24, 48]}> */}
     {[
       { component: Javascript, val: "JavaScript" },
       { component: ReactLogo, val: "React" },
@@ -84,9 +91,7 @@ export default function Skills() {
     <div className="container">
       <Row justify="center">
         <Col span={24}>
-          <h2 className="subtitle" style={{ marginTop: "200px" }}>
-            My Skills
-          </h2>
+          <h2 className="subtitle">My Skills</h2>
         </Col>
       </Row>
       <div ref={myRef}>{show ? <div className="sk">{ele}</div> : null}</div>

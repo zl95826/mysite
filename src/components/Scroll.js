@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { UpOutlined, ArrowUpOutlined } from "@ant-design/icons";
 
 const BackTop = React.memo(({ show }) => {
   const scrollTop = () => {
@@ -11,11 +12,8 @@ const BackTop = React.memo(({ show }) => {
   return (
     <>
       {show ? (
-        <button
-          onClick={scrollTop}
-          style={{ position: "fixed", bottom: "0", right: "0" }}
-        >
-          UP
+        <button onClick={scrollTop} className="backTop">
+          <ArrowUpOutlined />
         </button>
       ) : null}
     </>
