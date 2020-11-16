@@ -161,11 +161,11 @@ a.ant-btn {
 }
 #git:hover,
 #git:active {
-  color: #000000;
+  color: #959da5;
 }
 #mail:hover,
 #mail:active {
-  color: #0072c5;
+  color: #004f89;
 }
 .ant-layout-footer {
   padding-top: 80px;
@@ -174,18 +174,10 @@ a.ant-btn {
 .sk {
   position: relative;
   width: 100%;
+  padding-bottom: 70px;
 }
-.skill-item {
-  background-color: #f9ca24;
-}
-.skill-item:nth-of-type(3n) {
-  background-color: #badc58;
-}
-.skill-item:nth-of-type(2n) {
-  background-color: #ff7979;
-}
-.skill-item:nth-of-type(4n) {
-  background-color: #c7ecee;
+.skill-item .name {
+  line-height: 20px;
 }
 
 .hero-image-part,
@@ -330,6 +322,9 @@ a.ant-btn {
   }
   .mobile-hero-image {
     height: 350px;
+  }
+  .skill-item .name {
+    line-height: 18px;
   }
 }
 @media screen and (max-width: 375px) {
