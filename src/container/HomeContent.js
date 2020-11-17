@@ -35,8 +35,8 @@ export default function HomeContent() {
       </div>
       <div className="container">
         <h2 className="subtitle">My Recent Work</h2>
-        <Row justify="center" gutter={[24, 24]}>
-          {/* <Col span={24}>
+        <Row justify="center">
+          {/* <Col span={24}>  gutter={[48, 72]}
             <h2 className="subtitle">My Recent Work</h2>
           </Col> */}
           {/* <Suspense fallback={<h2>Loading</h2>}> */}

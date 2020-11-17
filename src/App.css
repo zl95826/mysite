@@ -88,6 +88,18 @@ h3 {
   font-size: 16px;
   border-radius: 50px;
 }
+.view-more {
+  border: 3px solid #f9ca24 !important;
+  background-color: #000000 !important;
+  width: 35% !important;
+  color: #ffffff;
+}
+.view-more:active,
+.view-more:hover {
+  border-color: #f9ca24;
+  background-color: #f9ca24 !important;
+  color: white;
+}
 .subtitle {
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -112,18 +124,7 @@ h3 {
   cursor: pointer;
 }
 .recent-container2 {
-  padding-top: 110%;
-}
-.recent-container img {
-  width: 100%;
-  height: auto;
-  /* min-width: 100%;
-  height: 100%;
-  object-fit: cover; */
-  /*ensure the same height*/
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding-top: 130%;
 }
 .recent-middle {
   position: absolute;
@@ -140,7 +141,7 @@ h3 {
   align-items: center;
 }
 .recent-container:hover .recent-middle {
-  background-color: rgba(10, 10, 10, 0.5);
+  background-color: rgba(10, 10, 10, 0.8);
   height: 100%;
   opacity: 1;
 }
