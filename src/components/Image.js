@@ -22,7 +22,14 @@ export default function Image({ src, text, classname, color, url }) {
       >
         {/* <img src={src} alt={text} width={500} height={600} /> */}
         <div className="recent-middle">
-          <h3 style={{ color: "white", fontWeight: 600, textAlign: "center" }}>
+          <h3
+            style={{
+              color: "white",
+              fontWeight: 600,
+              textAlign: "center",
+              width: "85%",
+            }}
+          >
             {text}
           </h3>
           {url && (
@@ -30,7 +37,7 @@ export default function Image({ src, text, classname, color, url }) {
               type="primary"
               href={url}
               target="_blank"
-              className="show-me-more view-more"
+              className="view-more"
             >
               VIEW MORE
             </Button>
