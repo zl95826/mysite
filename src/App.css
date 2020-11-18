@@ -108,7 +108,7 @@ h3 {
 .subtitle {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  padding: 70px 0;
+  padding: 6% 0;
   margin-bottom: 0;
 }
 .ant-timeline-item p,
@@ -120,6 +120,17 @@ h3 {
 }
 .ant-timeline-item p {
   padding: 0 6% 0 0;
+  color: #000000;
+}
+.ant-timeline.ant-timeline-label .ant-timeline-item-label {
+  font-weight: 700;
+}
+.ant-timeline-item-head-blue {
+  color: #6ab04c;
+  border-color: #6ab04c;
+}
+.ant-timeline-item-head {
+  background-color: #6ab04c;
 }
 .recent-container {
   position: relative;
