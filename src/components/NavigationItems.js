@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function NavigationItem({ link, children }) {
   return (
-    <NavLink to={link} exact>
+    <NavLink to={link} exact activeClassName="selected">
       {children}
     </NavLink>
   );

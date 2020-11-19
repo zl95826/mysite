@@ -125,12 +125,24 @@ h3 {
 .ant-timeline.ant-timeline-label .ant-timeline-item-label {
   font-weight: 700;
 }
+.ant-timeline.ant-timeline-alternate .ant-timeline-item-head,
+.ant-timeline.ant-timeline-right .ant-timeline-item-head,
+.ant-timeline.ant-timeline-label .ant-timeline-item-head {
+  margin-left: -12px;
+}
 .ant-timeline-item-head-blue {
-  color: #6ab04c;
-  border-color: #6ab04c;
+  /* color: #6ab04c;
+  border-color: #6ab04c; */
+  color: #ffffff;
+  border: 0 solid #ffffff;
 }
 .ant-timeline-item-head {
-  background-color: #6ab04c;
+  top: -6px;
+  width: 26px;
+  height: 26px;
+  /* background-color: #6ab04c; */
+  background-image: url(logo.png);
+  background-size: contain;
 }
 .recent-container {
   position: relative;
@@ -214,6 +226,16 @@ a.ant-btn {
   border: 0;
   font-size: 35px;
   font-weight: 800;
+}
+.about-img {
+  margin-top: 35px;
+  margin-bottom: -12%;
+}
+#About .about-p {
+  padding: 6% 0 10% 0;
+}
+#About .intro {
+  margin-top: -20px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -321,6 +343,7 @@ a.ant-btn {
   }
   .subtitle {
     font-size: 1.6rem;
+    padding: 8% 0;
   }
   a.ant-btn {
     width: 42%;
@@ -336,6 +359,23 @@ a.ant-btn {
     width: 50% !important;
     line-height: 48px !important;
   }
+  .about-img {
+    margin-top: 25px;
+  }
+  #About .about-p {
+    padding: 10.5% 0 13.5% 0;
+  }
+  .selected {
+    color: #f9ca24 !important;
+  }
+  .recent-container2 {
+    padding-top: 100%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .ant-timeline-item-head {
+    left: -8px;
+  }
 }
 @media screen and (max-width: 425px) {
   a.ant-btn {
@@ -344,8 +384,14 @@ a.ant-btn {
   .mobile-hero-image {
     height: 350px;
   }
+  .subtitle {
+    padding: 10% 0;
+  }
   .skill-item .name {
     line-height: 18px;
+  }
+  #About .intro {
+    margin-top: -15px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -508,6 +554,14 @@ a.ant-btn {
   .hero-item2 {
     display: block;
   }
+  .selected {
+    color: #ffffff;
+  }
+}
+@media screen and (min-width: 780px) {
+  .ant-timeline-item-content {
+    min-height: 400px;
+  }
 }
 @media screen and (min-width: 1216px) {
   .container {
@@ -532,6 +586,9 @@ a.ant-btn {
   }
   .hero-image-part {
     right: 10%;
+  }
+  #About .about-p {
+    padding: 100px 0 155px 0;
   }
 }
 @media screen and (max-height: 700px) {

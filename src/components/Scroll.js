@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { UpOutlined, ArrowUpOutlined } from "@ant-design/icons";
+import { ArrowUpOutlined } from "@ant-design/icons";
 
 const BackTop = React.memo(({ show }) => {
   const scrollTop = () => {

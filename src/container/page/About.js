@@ -1,8 +1,7 @@
 import React from "react";
 import { Row, Col } from "antd";
 import Experience from "../../components/Experience";
-import QueueAnim from "rc-queue-anim";
-import bg1 from "../../bg1.png";
+import about from "../../about.png";
 export default function About() {
   return (
     <section id="About" style={{ minHeight: "100vh" }}>
@@ -11,33 +10,35 @@ export default function About() {
           textAlign: "center",
           width: "100%",
           backgroundColor: "#ffffff",
-          // display: "none",
-          // backgroundColor: "#f9ca24",
         }}
       >
         <div className="container">
-          <QueueAnim type={["right", "left"]} delay={100} interval={300}>
-            <Row justify="center" key="0">
-              <Col
-                xs={{ span: 20 }}
-                sm={{ span: 20 }}
-                md={{ span: 20 }}
-                lg={{ span: 20 }}
-                style={{ paddingBottom: "6%" }}
-              >
-                <h2 className="subtitle">ABOUT ME</h2>
-                <h3>
-                  Hi, I’m Betty! I love programming, designing,
-                  <br />
-                  traveling, hiking, and cooking.
-                </h3>
-              </Col>
-            </Row>
-          </QueueAnim>
+          <Row justify="center">
+            <Col
+              xs={{ span: 20 }}
+              sm={{ span: 20 }}
+              md={{ span: 20 }}
+              lg={{ span: 20 }}
+              style={{ paddingBottom: "6%" }}
+            >
+              <h2 className="subtitle">ABOUT ME</h2>
+              <h3 className="intro">
+                Hi, I’m Betty! I love programming, designing, <br />
+                traveling, hiking, and cooking.
+              </h3>
+              <img
+                src={about}
+                alt="about me"
+                className="about-img"
+                width="200"
+                height="205"
+              />
+            </Col>
+          </Row>
         </div>
       </div>
       <div style={{ backgroundColor: "#f4f4f4" }}>
-        <div className="container" style={{ padding: "4% 0 6% 0" }}>
+        <div className="container about-p">
           <Row justify="center">
             <Col
               xs={{ span: 18 }}
