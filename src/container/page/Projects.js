@@ -1,8 +1,10 @@
 import React from "react";
 import { Row, Col } from "antd";
 import Project from "../../components/project/Project";
-import k2 from "../../1.jpg";
-import k3 from "../../KN2.jpg";
+import ZDG from "../../portfolio/zdg.png";
+import Bunbao from "../../portfolio/bb2.png";
+import Arrow from "../../portfolio/arrow.png";
+import HL from "../../portfolio/hl.png";
 import QueueAnim from "rc-queue-anim";
 export default function Projects() {
   const portfolio = [
@@ -13,7 +15,7 @@ export default function Projects() {
       stack: "HTML, CSS, JavaScript, PHP, Wordpress, React",
       client: "testtesttesttesttest",
       role: "UX/UI design, Front-end",
-      src: k2,
+      src: Bunbao,
       text: "texttesttest",
       url: "https://www.google.com/",
     },
@@ -24,7 +26,7 @@ export default function Projects() {
       stack: "HTML, CSS, JavaScript, PHP, Wordpress, React",
       client: "testtesttesttesttest",
       role: "twa",
-      src: k3,
+      src: ZDG,
       text: "UX/UI design, Front-end",
       url: "https://www.google.com/",
     },
@@ -35,7 +37,7 @@ export default function Projects() {
       stack: "HTML, CSS, JavaScript, PHP, Wordpress, React",
       client: "testtesttesttesttest",
       role: "UX/UI design, Front-end",
-      src: k2,
+      src: Arrow,
       text: "texttesttest",
       url: "https://www.google.com/",
     },
@@ -46,7 +48,7 @@ export default function Projects() {
       stack: "HTML, CSS, JavaScript, PHP, Wordpress, React",
       client: "testtesttesttesttest",
       role: "twa",
-      src: k3,
+      src: HL,
       text: "UX/UI design, Front-end",
       url: "https://www.google.com/",
     },
@@ -62,9 +64,7 @@ export default function Projects() {
           <h2 className="subtitle">WHAT I DID</h2>
         </Col>
         <Col span={20}>
-          <h3 style={{ textAlign: "center", marginBottom: "30px" }}>
-            See my works below.
-          </h3>
+          <h3 className="intro">See my works below.</h3>
         </Col>
       </Row>
 

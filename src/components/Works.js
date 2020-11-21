@@ -3,7 +3,7 @@ import Image from "./Image";
 import ECommerce from "../eCommerce.jpg";
 import Tgame from "../3T_game.png";
 import ATOM from "../mockupATOM1.jpg";
-import Burger from "../burger.jpg";
+import Burger from "../burger.png";
 export default function Works() {
   const works = [
     {

@@ -1,18 +1,23 @@
 .block {
   width: 100%;
-  min-height: 50em;
-  padding: 5% 6%;
+  min-height: 55em;
+  padding: 5% 4.5%;
   position: relative;
   overflow: hidden;
-  margin: 0 0 20px;
+  margin: 0 0 20px 0;
   display: flex;
-  background-color: #ecf0f1;
-  flex-direction: column;
+  background-color: #ffffff;
+  flex-direction: row;
+  border: 12px solid #eeeeee;
+  border-radius: 15px;
+  flex-wrap: nowrap;
+}
+.content {
+  width: 45%;
 }
 .client_role {
   display: flex;
-  width: 55%;
-  justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 40px;
 }
 
@@ -24,36 +29,51 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 45%;
+  width: 55%;
   right: 0;
+  margin: 15px 0;
 }
-.img_tablet {
-  display: none;
+.button {
+  width: 68%;
+  min-width: 240px;
 }
 @media (max-width: 1023px) {
   .block {
-    padding: 6% 4%;
+    padding: 0 2.5%;
+    flex-direction: column;
+  }
+  .content {
+    width: 100%;
   }
   .client_role {
     width: 80%;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
   .image {
-    display: none;
+    position: relative;
+    width: 100%;
+    margin: -30px 0 75px 0;
+    padding-top: 100%;
+    background-position: center center !important;
   }
-  .img_tablet {
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-  }
-  .img_tablet img {
-    max-width: 100%;
-    height: auto;
+  .button {
+    position: absolute !important;
+    z-index: 10;
+    bottom: 8px;
+    left: 50%;
+    margin-left: -120px;
   }
 }
 @media (max-width: 767px) {
+  .block {
+    padding: 0 4%;
+  }
   .client_role {
     width: 100%;
     flex-wrap: wrap;
+  }
+  .image {
+    padding-top: 160%;
+    background-position: center !important;
   }
 }
