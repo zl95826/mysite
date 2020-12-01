@@ -12,7 +12,6 @@ export default function DrawerToggle({ click, icon }) {
   } else
     return (
       <div className="DrawerToggle closeIcon" onClick={click}>
-        {/* Menu */}
         <CloseOutlined />
       </div>
     );

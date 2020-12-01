@@ -5,59 +5,70 @@ import ZDG from "../../portfolio/zdg.png";
 import Bunbao from "../../portfolio/bb2.png";
 import Arrow from "../../portfolio/arrow.png";
 import HL from "../../portfolio/hl.png";
-import QueueAnim from "rc-queue-anim";
+import MOD from "../../portfolio/mod.png";
+
+const portfolio = [
+  {
+    title: "BunBao",
+    desc:
+      "Creating the web application with responsive design that allow customers to order food online and manage orders by admin panel",
+    stack: "React, Redux, HTML, CSS, Redux Thunk, GraphQL",
+    client: "BunBao",
+    role: "UX/UI design, Front-end",
+    src: Bunbao,
+    url: "https://bunbao.com/",
+    color: "#f9f9f9",
+  },
+  {
+    title: "ZERODAY Group",
+    desc: "Creating the company website with modern and responsive design",
+    stack: "JavaScript, jQuery, PHP, Wordpress, HTML, CSS",
+    client: "Zero Day Group",
+    role: "Front-end",
+    src: ZDG,
+    url: "https://www.zerodaygroup.com/",
+    color: "#003184",
+  },
+  {
+    title: "HealthLink Systems",
+    desc:
+      "Refreshing the corporate website to promote their healthcare management system",
+    stack: "JavaScript, jQuery, PHP, Wordpress, HTML, CSS",
+    client: "Health Link Systems",
+    role: "UX/UI design, Front-end",
+    src: HL,
+    url: "http://www.healthlinksys.com/",
+    color: "#ffaf40",
+  },
+  {
+    title: "ATOM",
+    desc: "Redesigning the user interface",
+    stack: "Photoshop, Illustrator",
+    client: "Accenture ATOM",
+    role: "UX/UI design",
+    src: Arrow,
+    url: "#",
+    color: "#702dda",
+  },
+  {
+    title: "Modintegration",
+    desc:
+      "Designing a perfect look and modern feel, and translating the design to a company website to promote their smart system",
+    stack:
+      "HTML, CSS, JavaScript, PHP, Wordpress, jQuery, Photoshop, Illustrator",
+    client: "Modintegration",
+    role: "UX/UI design, Front-end",
+    src: MOD,
+    url: "https://modintegration.com/",
+    color: "#29c2f6",
+  },
+];
 export default function Projects() {
-  const portfolio = [
-    {
-      title: "Content",
-      desc:
-        "a complete redesign focusing on mobile use, information and leads.",
-      stack: "HTML, CSS, JavaScript, PHP, Wordpress, React",
-      client: "testtesttesttesttest",
-      role: "UX/UI design, Front-end",
-      src: Bunbao,
-      text: "texttesttest",
-      url: "https://www.google.com/",
-    },
-    {
-      title: "Content",
-      desc:
-        "a complete redesign focusing on mobile use, information and leads.",
-      stack: "HTML, CSS, JavaScript, PHP, Wordpress, React",
-      client: "testtesttesttesttest",
-      role: "twa",
-      src: ZDG,
-      text: "UX/UI design, Front-end",
-      url: "https://www.google.com/",
-    },
-    {
-      title: "Content",
-      desc:
-        "a complete redesign focusing on mobile use, information and leads.",
-      stack: "HTML, CSS, JavaScript, PHP, Wordpress, React",
-      client: "testtesttesttesttest",
-      role: "UX/UI design, Front-end",
-      src: Arrow,
-      text: "texttesttest",
-      url: "https://www.google.com/",
-    },
-    {
-      title: "Content",
-      desc:
-        "a complete redesign focusing on mobile use, information and leads.",
-      stack: "HTML, CSS, JavaScript, PHP, Wordpress, React",
-      client: "testtesttesttesttest",
-      role: "twa",
-      src: HL,
-      text: "UX/UI design, Front-end",
-      url: "https://www.google.com/",
-    },
-  ];
   return (
     <section
       id="portfolio"
       className="container"
-      style={{ minHeight: "100vh" }}
+      style={{ minHeight: "200vh" }}
     >
       <Row justify="center">
         <Col span={24}>
@@ -68,18 +79,11 @@ export default function Projects() {
         </Col>
       </Row>
 
-      <QueueAnim
-        type={["right", "left"]}
-        delay={100}
-        duration={600}
-        interval={600}
-      >
+      <Row justify="center" className="container">
         {portfolio.map((val, index) => (
-          <Row justify="center" key={index}>
-            <Project {...val} />
-          </Row>
+          <Project {...val} key={index} />
         ))}
-      </QueueAnim>
+      </Row>
     </section>
   );
 }

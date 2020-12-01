@@ -2,29 +2,29 @@ import React from "react";
 import { Col, Button } from "antd";
 import project from "./project.module.css";
 import { SwapRightOutlined } from "@ant-design/icons";
-export default function Project({
+const SingleProject = ({
   title,
   desc,
   stack,
   client,
   role,
   src,
-  text,
+  color,
   url,
-}) {
+}) => {
   return (
-    <Col span={24}>
-      <div className={project.block}>
+    <Col span={24} className="po">
+      <div className={project.block} style={{ backgroundColor: color }}>
         <div className={project.content}>
-          <h2 className="subtitle" style={{ textAlign: "left" }}>
+          <h2 className="subtitle" style={{ textAlign: "left" }} key="0">
             {title}
           </h2>
-          <h3>{desc}</h3>
-          <div className={project.desc}>
+          <h3 key="1">{desc}</h3>
+          <div className={project.desc} key="2">
             <p>Technologies used to create the project:</p>
             <p>{stack}</p>
           </div>
-          <div className={project.client_role}>
+          <div className={project.client_role} key="3">
             <p>
               <b>Client</b>: {client}
             </p>
@@ -33,6 +33,7 @@ export default function Project({
             </p>
           </div>
           <Button
+            key="4"
             type="primary"
             href={url}
             target="_blank"
@@ -53,4 +54,7 @@ export default function Project({
       </div>
     </Col>
   );
-}
+};
+
+const Project = React.memo(SingleProject);
+export default Project;

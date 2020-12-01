@@ -8,12 +8,13 @@
   display: flex;
   background-color: #ffffff;
   flex-direction: row;
-  border: 12px solid #eeeeee;
-  border-radius: 15px;
+  /* border: 12px solid #eeeeee;
+  border-radius: 15px; */
   flex-wrap: nowrap;
 }
 .content {
-  width: 45%;
+  width: 44%;
+  margin-right: 1%;
 }
 .client_role {
   display: flex;
@@ -50,9 +51,10 @@
     margin-bottom: 15px;
   }
   .image {
+    margin-top: 25px;
     position: relative;
     width: 100%;
-    margin: -30px 0 75px 0;
+    margin: -20px 0 75px 0;
     padding-top: 100%;
     background-position: center center !important;
   }

@@ -65,7 +65,6 @@ const skillHOC = (Component) => (props) => {
 
 const ele = (
   <Row justify="center">
-    {/* <Row justify="center" gutter={[24, 48]}> */}
     {[
       { component: Javascript, val: "JavaScript", color: "#f0db4f" },
       { component: ReactLogo, val: "React", color: "#61DBFB" },
