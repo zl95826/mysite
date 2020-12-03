@@ -34,10 +34,15 @@
   right: 0;
   margin: 15px 0;
 }
+.image div {
+  height: 100%;
+  padding-top: 0;
+}
 .button {
   width: 68%;
   min-width: 240px;
 }
+
 @media (max-width: 1023px) {
   .block {
     padding: 0 2.5%;
@@ -55,8 +60,11 @@
     position: relative;
     width: 100%;
     margin: -20px 0 75px 0;
-    padding-top: 100%;
     background-position: center center !important;
+  }
+  .image div {
+    height: 0;
+    padding-top: 100%;
   }
   .button {
     position: absolute !important;
@@ -75,7 +83,9 @@
     flex-wrap: wrap;
   }
   .image {
-    padding-top: 160%;
     background-position: center !important;
+  }
+  .image div {
+    padding-top: 160%;
   }
 }

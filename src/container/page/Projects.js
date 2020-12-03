@@ -11,8 +11,8 @@ const portfolio = [
   {
     title: "BunBao",
     desc:
-      "Creating the web application with responsive design that allow customers to order food online and manage orders by admin panel",
-    stack: "React, Redux, HTML, CSS, Redux Thunk, GraphQL",
+      "Creating the web application with responsive design that allows customers to order food online and manage orders by admin panel",
+    stack: "React, Redux, HTML, CSS, Redux Thunk, GraphQL, Ant Design",
     client: "BunBao",
     role: "UX/UI design, Front-end",
     src: Bunbao,
