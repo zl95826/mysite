@@ -1,11 +1,9 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import Characters from "../components/Characters";
-import { Row, Col } from "antd";
-import logo from "../logo.svg";
+import { Row } from "antd";
 import Skills from "../components/Skills";
 import Works from "../components/Works";
 import bg5 from "../bg5.png";
-//const Works = lazy(() => import("../components/Works"));
 import Hero from "../components/Hero";
 import { NavLink } from "react-router-dom";
 const heroSection = (
@@ -36,12 +34,7 @@ export default function HomeContent() {
       <div className="container">
         <h2 className="subtitle">My Recent Work</h2>
         <Row justify="center">
-          {/* <Col span={24}>  gutter={[48, 72]}
-            <h2 className="subtitle">My Recent Work</h2>
-          </Col> */}
-          {/* <Suspense fallback={<h2>Loading</h2>}> */}
           <Works />
-          {/* </Suspense> */}
         </Row>
         <Skills />
       </div>

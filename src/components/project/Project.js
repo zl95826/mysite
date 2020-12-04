@@ -43,7 +43,7 @@ const SingleProject = ({
               animation={{
                 translateY: 0,
                 opacity: 1,
-                playScale: [0.25, 0.4],
+                playScale: [0.25, 0.3],
               }}
               style={{
                 transform: "translateY(180px)",
@@ -63,17 +63,24 @@ const SingleProject = ({
           <Parallax
             always={false}
             animation={{ translateX: 0, opacity: 1, playScale: [0.3, 0.7] }}
-            style={{ transform: "translateX(200px)", opacity: 0 }}
+            style={{
+              transform: "translateX(200px)",
+              opacity: 0,
+              backgroundImage: `url(${src})`,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+            }}
             className={project.image}
           >
-            <div
+            {/* <div
               style={{
                 backgroundImage: `url(${src})`,
                 backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
               }}
-            />
+            /> */}
           </Parallax>
         </div>
       </Col>
@@ -108,21 +115,15 @@ const SingleProject = ({
               VIEW WEBSITE <SwapRightOutlined />
             </Button>
           </div>
-          <Parallax
-            always={false}
-            animation={{ translateY: 0, opacity: 1, playScale: [0.2, 0.55] }}
-            style={{ transform: "translateY(100px)", opacity: 0 }}
+          <div
             className={project.image}
-          >
-            <div
-              style={{
-                backgroundImage: `url(${src})`,
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-              }}
-            />
-          </Parallax>
+            style={{
+              backgroundImage: `url(${src})`,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+            }}
+          />
         </div>
       </Col>
     );

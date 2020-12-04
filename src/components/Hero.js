@@ -10,17 +10,12 @@ const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 12}px,0)`;
 const trans2 = (x, y) => `translate3d(${x / 8}px,${y / 12}px,0)`;
 const trans3 = (x, y) => `translate3d(${x / 6}px,${y / 12}px,0)`;
 const trans4 = (x, y) => `translate3d(${x / 6}px,${y / 10}px,0)`;
-// const trans5 = (x, y) => (y > 0 ? `0.48` : `0.8`);
 
 export default function Hero() {
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
     config: { mass: 10, tension: 550, friction: 140 },
   }));
-  //   const onMove = useCallback(
-  //     (e) => set({ xy: calc(e.clientX, e.clientY) }),
-  //     []
-  //   );
   return (
     <div
       onMouseMove={(e) => set({ xy: calc(e.clientX, e.clientY) })}
