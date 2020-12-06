@@ -4,7 +4,7 @@ import AppHeader from "./container/AppHeader";
 import AppFooter from "./container/AppFooter";
 import "antd/dist/antd.css";
 import "./App.css";
-import { Route, Switch } from "react-router";
+import { Route, Switch, Redirect } from "react-router";
 import Scroll from "./components/Scroll";
 import Spinner from "./components/Spinner/Spinner";
 const HomeContent = React.lazy(() => import("./container/HomeContent"));
@@ -20,15 +20,16 @@ function App() {
       <Content>
         <Suspense fallback={<Spinner />}>
           <Switch>
-            <Route exact path="/">
-              <HomeContent />
-            </Route>
-            <Route path="/about">
+            <Route exact path="/about">
               <About />
             </Route>
-            <Route path="/portfolio">
+            <Route exact path="/portfolio">
               <Projects />
             </Route>
+            <Route path="/">
+              <HomeContent />
+            </Route>
+            <Redirect to="/" />
           </Switch>
         </Suspense>
       </Content>
