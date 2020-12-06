@@ -2,7 +2,6 @@
   "name": "mysite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zl95826.github.io/mysite",
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
     "@styled-icons/fa-brands": "^10.22.0",
