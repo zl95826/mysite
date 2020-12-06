@@ -23,10 +23,10 @@ function App() {
             <Route exact path="/">
               <HomeContent />
             </Route>
-            <Route path="/about">
+            <Route exact path="/about">
               <About />
             </Route>
-            <Route path="/portfolio">
+            <Route exact path="/portfolio">
               <Projects />
             </Route>
           </Switch>
